@@ -1,3 +1,3 @@
 #!/bin/sh -l
 
-sh -c "npx standard $*"
+sh -c "npx semistandard $*"
