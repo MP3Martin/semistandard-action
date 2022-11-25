@@ -9,7 +9,7 @@ _.github/workflows/lint.yml_
 on: [push, pull_request]
 name: Main
 jobs:
-  standardjs:
+  semistandard:
     name: Semistandard
     runs-on: ubuntu-latest
     steps:
