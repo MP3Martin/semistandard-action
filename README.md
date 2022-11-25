@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Semistandard
-      uses: MP3Martin/semistandard-action@latest
+      uses: MP3Martin/semistandard-action@0
       with:
         args: --fix
 ```
