@@ -16,6 +16,7 @@ jobs:
     - uses: actions/checkout@master
     - name: Semistandard
       uses: MP3Martin/semistandard-action@master
+      continue-on-error: true
       with:
         args: --fix
 ```
