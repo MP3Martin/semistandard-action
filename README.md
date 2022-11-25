@@ -1,4 +1,4 @@
-# StandardJS Github Action
+# Semistandard Github Action
 
 ## Usage
 
