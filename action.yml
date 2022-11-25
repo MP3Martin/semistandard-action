@@ -1,9 +1,9 @@
-name: 'standardjs-ga'
-author: 'jopereyral'
-description: 'Auto commit with standardjs fix'
+name: 'semistandard-ga'
+author: 'MP3Martin'
+description: 'Auto commit with semistandard fix'
 inputs:
   args:  # id of input
-    description: 'args to standardjs'
+    description: 'args to semistandard'
 runs:
   using: 'docker'
   image: 'Dockerfile'
