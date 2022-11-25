@@ -10,12 +10,12 @@ on: [push, pull_request]
 name: Main
 jobs:
   standardjs:
-    name: StandardJs
+    name: Semistandard
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: StandardJs
-      uses: docker://jopereyral/standardjs-action
+    - name: Semistandard
+      uses: MP3Martin/semistandard-action@latest
       with:
         args: --fix
 ```
