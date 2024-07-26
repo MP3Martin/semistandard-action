@@ -7,7 +7,7 @@ You can use it as a Github Action like this:
 _.github/workflows/lint.yml_
 ```yml
 on: [push, pull_request]
-name: Main
+name: reformat
 jobs:
   semistandard:
     name: Semistandard
