@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:22.5.1-alpine
 
 COPY LICENSE README.md /
 
