@@ -13,9 +13,9 @@ jobs:
     name: Semistandard
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@3
     - name: Semistandard
-      uses: MP3Martin/semistandard-action@master
+      uses: MP3Martin/semistandard-action@2
       with:
         args: --fix
 ```
