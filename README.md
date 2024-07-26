@@ -12,9 +12,13 @@ jobs:
   semistandard:
     name: Semistandard
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
     steps:
     - uses: actions/checkout@v4
-    - name: Semistandard
+    - name: Run semistandard-ga
       uses: MP3Martin/semistandard-action@v2
 ```
 
