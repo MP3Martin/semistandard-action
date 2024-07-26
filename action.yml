@@ -1,9 +1,17 @@
 name: 'semistandard-ga'
 author: 'MP3Martin'
 description: 'Auto commit with semistandard fix'
+
 inputs:
-  args:  # id of input
-    description: 'args to semistandard'
+  args:
+    description: 'Arguments to semistandard'
+    required: false
+    default: '--fix'
+  commit:
+    description: 'Enable auto commit'
+    required: false
+    default: 'true'
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
