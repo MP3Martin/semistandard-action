@@ -19,12 +19,17 @@ inputs:
 runs:
   using: 'composite'
   steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 'lts/Iron'
+
     - name: Run semistandard
       id: semistandard
       shell: sh
       run: |
         npx semistandard ${{ inputs.args }} || exit 0
-    
+
     - name: Auto commit changes
       if: ${{ inputs.commit == 'true' }}
       uses: stefanzweifel/git-auto-commit-action@v5
