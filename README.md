@@ -25,6 +25,6 @@ jobs:
 
 ## Optional parameters
 
-**[Can be found here](https://github.com/MP3Martin/semistandard-action/blob/86e6e1f2371be70f6899f8eb50c13679dc6b7c6d/action.yml#L5-L17)**
+**[Are listed here](https://github.com/MP3Martin/semistandard-action/blob/86e6e1f2371be70f6899f8eb50c13679dc6b7c6d/action.yml#L5-L17)**
 
 Usage: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-of-jobsjob_idstepswith
