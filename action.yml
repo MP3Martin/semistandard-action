@@ -10,7 +10,7 @@ inputs:
   commit:
     description: 'Enable auto commit'
     required: false
-    default: true
+    default: 'true'
   commit_message:
     description: 'Commit message for auto commit'
     required: false
