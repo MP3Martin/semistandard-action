@@ -1,14 +1,40 @@
 name: 'semistandard-ga'
 author: 'MP3Martin'
 description: 'Auto commit with semistandard fix'
+
 inputs:
-  args:  # id of input
-    description: 'args to semistandard'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
   args:
-    - ${{ inputs.args }}
+    description: 'Arguments to semistandard'
+    required: false
+    default: '--fix'
+  commit:
+    description: 'Enable auto commit'
+    required: false
+    default: 'true'
+  commit_message:
+    description: 'Commit message for auto commit'
+    required: false
+    default: 'chore: auto commit changes from semistandard'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 'lts/Iron'
+
+    - name: Run semistandard
+      id: semistandard
+      shell: sh
+      run: |
+        npx semistandard ${{ inputs.args }} || exit 0
+
+    - name: Auto commit changes
+      if: ${{ inputs.commit == 'true' }}
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: ${{ inputs.commit_message }}
 
 branding:
   icon: 'check-circle'
